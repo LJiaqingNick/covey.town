@@ -1,7 +1,5 @@
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const bcrypt = require('bcryptjs');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const jwt = require('jsonwebtoken');
 /**
  * This function exists solely to help satisfy the linter + typechecker when it looks over the
@@ -45,7 +43,7 @@ export async function signAccessToken(email: string): Promise<string> {
  */
 export async function verifyAccessToken(
   token: string,
-): Promise<string | jwt.JwtPayload | undefined> {
+): Promise<string | undefined> {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
     return decoded;
