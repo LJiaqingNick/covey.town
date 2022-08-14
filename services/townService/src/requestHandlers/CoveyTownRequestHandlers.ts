@@ -1,5 +1,4 @@
 import assert from 'assert';
-import bcrypt from 'bcryptjs';
 import { Socket } from 'socket.io';
 import { createUser, findUser } from '../client/prismaFunctions';
 import {
@@ -12,6 +11,8 @@ import CoveyTownListener from '../types/CoveyTownListener';
 import Player from '../types/Player';
 import { hashPassword, signAccessToken, verifyAccessToken } from '../Utils';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const bcrypt = require('bcryptjs');
 /**
  * The format of a request to join a Town in Covey.Town, as dispatched by the server middleware
  */
