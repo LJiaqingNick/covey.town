@@ -1,6 +1,8 @@
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const bcrypt = require('bcryptjs');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const jwt = require('jsonwebtoken');
 /**
  * This function exists solely to help satisfy the linter + typechecker when it looks over the
  * stubbed (not yet implemented by you) functions. Remove calls to it as you go.
